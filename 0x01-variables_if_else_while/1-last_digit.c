@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stio.h>
+#include <stdio.h>
 /**
  * main -prints the last digit of the random
  * number stored in thevariable n
