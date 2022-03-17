@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - fizzbuzz print ot he console 1-100.
  * Return: void.
@@ -7,7 +8,7 @@
 int main(void)
 {
 	int i;
-
+	
 	for (i = 1; i < 101; ++i)
 	{
 		if (i % 15 == 0)
