@@ -1,29 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
- * main - fizzbuzz print ot he console 1-100.
- * Return: void.
+ * main - entry point
+ *
+ * Description: prints FizzBuzz
+ *
+ * Return: void
  */
 int main(void)
 {
-	int i;
-	
-	for (i = 1; i < 101; ++i)
+	int n;
+	for (n = 1; n <= 100; n++)
 	{
-		if (i % 15 == 0)
+		if ((n % 3 == 0) && (n % 5 == 0))
 			printf("FizzBuzz");
-		else if (i % 3 == 0)
-			printf("Fizz");
-		else if (i % 5 == 0)
+		else if (n % 5 == 0)
 			printf("Buzz");
+		else if (n % 3 == 0)
+			printf("Fizz");
 		else
-			printf("%d", i);
+			printf("%i", n);
 	
-		if (i < 100)
+		if (n < 100)
 			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
-
 	return (0);
 }
