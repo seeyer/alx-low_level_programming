@@ -1,11 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
  * main - print larges prime factor of a fixed numbe
  * Return: 0.
  */
-
 int main(void)
 {
 	long i, num;
