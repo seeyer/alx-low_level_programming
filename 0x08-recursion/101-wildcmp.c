@@ -29,7 +29,7 @@ int cmp(char *c1, char *c2)
 			return (escwild(c1, ++c2));
 		else if (*c1 == '\0')
 			return (1);
-		els
+		else
 			return (cmp(++c1, ++c2));
 	}
 	return (0);
