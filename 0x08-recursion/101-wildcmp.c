@@ -1,12 +1,10 @@
 #include "main.h"
-
 int cmp(char *c1, char *c2);
 /**
  * escwild - escapes wildcard and increments string 1 if fails to match
  * @c1: string 
  * @wild: string 2
  * Return: go through string 1 until it finds a match or '\0' value is found
- *
  */
 int escwild(char *c1, char *wild)
 {
@@ -14,7 +12,6 @@ int escwild(char *c1, char *wild)
 		return (cmp(c1, wild));
 	return (cmp(c1, wild) || escwild(++c1, wild));
 }
-
 /**
  * cmp - compare string 1 and string 2 using wildcar
  * @c1: string 1
@@ -34,7 +31,6 @@ int cmp(char *c1, char *c2)
 	}
 	return (0);
 }
-
 /**
  * wildcmp - compare string 1 and string 2 using wildcard
  * @s1: string 1
