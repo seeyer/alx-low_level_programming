@@ -13,11 +13,13 @@ int help(int n, int x)
 		return (help(n, ++x));
 	return (-1);
 }
+
 /**
  * _sqrt_recursion - get the natural sqrt of n
  * @n: integer
- * Return: natural sqrt of 
+ * Return: natural sqrt of
  */
+
 int _sqrt_recursion(int n)
 {
 	return (help(n, 0));
