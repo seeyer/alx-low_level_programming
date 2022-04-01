@@ -2,12 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 /**
  * main - Prints the sum of args positive numbers
  * @argc: argument count
  * @argv: argument vector\
- *
  * Return: Always zero
  */
 int main(int argc, char *argv[])
