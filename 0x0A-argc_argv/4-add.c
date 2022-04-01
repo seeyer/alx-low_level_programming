@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
  * main - Prints the sum of args positive numbers
  * @argc: argument count
