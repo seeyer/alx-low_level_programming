@@ -1,45 +1,60 @@
-#include "main.h"
 #include <stdio.h>
+#include <strings.h>
 #include <stdlib.h>
-#include <string.h>
-
+#include <ctype.h>
+#define UNUSED(x) (void)(x)
+int isNumber(char number[]);
 /**
- * main - Prints the sum of args positive numbers
- * @argc: argument count
- * @argv: argument vector\
- * Return: Always zero
+ * main - prints out program name
+ * @argc: number of args to be passed
+ * @argv: strings passed
+ * Return: alway 0
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	unsigned int k, sum = 0;
-	char *e;
-
 	if (argc > 1)
 	{
+		int i, r;
+	
+		r = 0;
 		for (i = 1; i < argc; i++)
 		{
-			e = argv[i];
-		
-			for (k = 0; k < strlen(e); k++)
+			if (isNumber(argv[i]))
 			{
-				if (e[k] < 48 || e[k] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
+				r += atoi(argv[i]);
 			}
-		
-			sum += atoi(e);
-			e++;
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	
-		printf("%d\n", sum);
+		printf("%i\n", r);
+		return (0);
 	}
 	else
 	{
 		printf("0\n");
 	}
-
 	return (0);
+}
+/**
+ * isNumber - checks if string is number
+ * @number: string to check
+ * Return:1 if true 0 if false
+ */
+int isNumber(char number[])
+{
+	int i = 0;
+
+	if (number[0] == '-')
+		i = 1;
+
+	for (; number[i] != 0; i++)
+	{
+		if (!isdigit(number[i]))
+			return (0);
+	}
+	return (1);
 }
