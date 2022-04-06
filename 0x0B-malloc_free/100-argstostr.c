@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
  * argstostr - convert the params passed to the program to string
  * @ac: the argument count
@@ -30,14 +31,16 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 	while (av[i])
-	{
+	{	
 		while (av[i][j])
 		{
 			s[k] = av[i][j];
 			k++;
 			j++;
 		}
+	
 		s[k] = '\n';
+	
 		j = 0;
 		k++;
 		i++;
