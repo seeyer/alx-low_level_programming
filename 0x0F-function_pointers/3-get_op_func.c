@@ -1,6 +1,7 @@
+#include "3-calc.h"
+#include <stdlib.h>
+#include <string.h>
 
-<<<<<<< HEAD
-=======
 /**
 <<<<<<< HEAD
  * get_op_func - ...
@@ -45,4 +46,3 @@ int (*get_op_func(char *s))(int, int)
 
 	return (0);
 }
->>>>>>> bf97ffb65108cf3a197ea1dfad42474bbe4d2748
